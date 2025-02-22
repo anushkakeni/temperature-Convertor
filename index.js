@@ -1,5 +1,5 @@
 
-function tempConvert() {
+function temperatureConvert() {
 
    let input = parseFloat(document.getElementById("input").value);
    let unit = document.getElementById("unit").value;
@@ -8,7 +8,7 @@ function tempConvert() {
    let result;
 
    if (unit == 'Celsius' && convertTo == 'Fahrenheit') {
-      result = input * 9 / 5 + 32;
+      result = input * 9/5 + 32;
    }
 
    else if (unit == 'Fahrenheit' && convertTo == 'Celsius') {
@@ -21,17 +21,18 @@ function tempConvert() {
 
 
    result = parseFloat(result);
+   //result = result.toFixed(2);
 
-   console.log(result);
+   //console.log(result);
 
    document.getElementById("result").innerHTML = result;
 
-   document.getElementById("degSymbol").innerHTML = "&deg";
-   symbol = document.getElementById("degSymbol").innerHTML;
+   document.getElementById("degreeSymbol").innerHTML = "&deg";
+   //symbol = document.getElementById("degreeSymbol").innerHTML;
 
 
    document.getElementById("resultUnit").innerHTML = convertTo.charAt(0);
-   resultUnit = document.getElementById("degSymbol").innerHTML;
+   //resultUnit = document.getElementById("degreeSymbol").innerHTML;
 
 
 
